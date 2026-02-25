@@ -53,6 +53,10 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{fibeamer/theme/mu/%
   beamerouterthemefibeamer-mu}[2016/01/12]
+\def\fibeamer@course{}
+\newcommand{\course}[1]{\def\fibeamer@course{#1}}
+\def\fibeamer@advisor{}
+\newcommand{\advisor}[1]{\def\fibeamer@advisor{#1}}
 \mode<presentation>
   \RequirePackage{ifthen}
   \RequirePackage{ifpdf}
@@ -94,10 +98,10 @@
   % The logo size
   \newlength\fibeamer@lengths@logowidth
   \setlength\fibeamer@lengths@logowidth{%
-    14\fibeamer@lengths@baseunit}
+    5\fibeamer@lengths@baseunit}
   \newlength\fibeamer@lengths@logoheight
   \setlength\fibeamer@lengths@logoheight{%
-    0.4\fibeamer@lengths@logowidth}
+    5\fibeamer@lengths@baseunit}
   \defbeamertemplate*{navigation symbols}{fibeamer}{}
   \defbeamertemplate*{headline}{fibeamer}{}
   \defbeamertemplate*{frametitle}{fibeamer}{%
@@ -128,18 +132,15 @@
     \setcounter{framenumber}{0}
 
     % Input the university logo
-    \begin{tikzpicture}[
-      remember picture,
-      overlay,
-      xshift=0.5\fibeamer@lengths@logowidth,
-      yshift=0.5\fibeamer@lengths@logoheight
-    ]
-      \node at (0,0) {
-        \fibeamer@includeLogo[
-          width=\fibeamer@lengths@logowidth,
-          height=\fibeamer@lengths@logoheight
-        ]};
-    \end{tikzpicture}
+    \vskip-3\baselineskip
+    \begin{center}
+      \fibeamer@includeLogo[
+        width=\fibeamer@lengths@logowidth,
+        height=\fibeamer@lengths@logoheight,
+        keepaspectratio
+      ]
+    \end{center}
+    \vskip2\baselineskip
 
     % Input the title
     \usebeamerfont{title}%
@@ -169,13 +170,35 @@
       \insertsubtitle%
     \end{minipage}\vskip.25\baselineskip
 
+    % Input the course
+    \ifx\fibeamer@course\empty\else
+      \usebeamerfont{author}%
+      \usebeamercolor[fg]{author}%
+      \begin{minipage}{\textwidth}
+        \raggedright%
+        \fibeamer@course%
+      \end{minipage}
+    \fi
+
     % Input the author's name
+    \vskip.25\baselineskip
     \usebeamerfont{author}%
     \usebeamercolor[fg]{author}%
     \begin{minipage}{\textwidth}
       \raggedright%
       \insertauthor%
     \end{minipage}
+
+    % Input the advisor
+    \ifx\fibeamer@advisor\empty\else
+      \vskip.25\baselineskip
+      \usebeamerfont{author}%
+      \usebeamercolor[fg]{author}%
+      \begin{minipage}{\textwidth}
+        \raggedright%
+        \fibeamer@advisor%
+      \end{minipage}
+    \fi
     \end{darkframes}}
 
 \mode
