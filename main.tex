@@ -2,6 +2,7 @@
 \usetheme[faculty=phil, logo=fibeamer/logo/logo]{fibeamer}
 \usepackage[utf8]{inputenc}
 \usepackage[main=brazilian]{babel}
+\usepackage{csquotes}
 \usepackage{ragged2e}
 \usepackage{booktabs}
 \usepackage{tabularx}
@@ -10,72 +11,400 @@
 \usepackage{amsmath, amssymb}
 \usepackage{url}
 \usepackage{listings}
+\providecommand{\citeonline}[1]{\cite{#1}}
 \frenchspacing
-
+\input{fibeamer-section-cover}
+% -------------------------- Capa
 \title{Um \textit{Framework} de Diretrizes para ampliar o ingresso e a permanência de talentos femininos em Programas de Capacitação em Cibersegurança}
-
 \course{Programa de Pós-Graduação em Computação Aplicada}
 \author{Aluna: Isabella de Freitas Nunes}
 \advisor{Orientadora: Dra. Michelle Silva Wangham}
-
+% -------------------------- Começo do documento
 \begin{document}
-  \frame[c]{\maketitle}
-
-  \begin{frame}{Sumário}
-    {
-      \setlength{\parskip}{0pt}
-      \setlength{\lineskip}{0pt}
-      \tableofcontents
-    }
-  \end{frame}
-
-% Introdução 
-  \section{Introdução}
-
-  \begin{frame}{Introdução}
-  \end{frame}
-
-    \begin{frame}{Cenário Global}
-      \begin{itemize}
-      \justifying
-          \item A cibersegurança consolidou-se como um pilar estratégico para a soberania nacional e estabilidade econômica global.
-          
-          \item Força de trabalho precisa crescer para atender à crescente demanda por proteção de dados.
-          
-          \item Aumento de apenas 0,1\% em relação a 2023.
-          
-          \item Força de trabalho desacelerando, considerando o aumento de 8,7\% entre 2022 e 2023.
-      \end{itemize}
-    \end{frame}
-
-  \begin{frame}{Introdução}
-      \begin{itemize}
-      \justifying
-          \item A cibersegurança consolidou-se como um pilar estratégico para a soberania nacional e estabilidade econômica global.
-          \item Força de trabalho precisa crescer para atender à crescente demanda por proteção de dados.
-          \item Aumento de apenas 0,1\% em relação a 2023
-          \item Força de trabalho está desacelerando, considerando que houve um aumento de 8,7\% entre 2022 e 2023.
-      \end{itemize}
-    \end{frame}
-
-% Fundamentação Teórica
-  \section{Fundamentação Teórica}
-  \begin{frame}{Fundamentação Teórica}
-    \justifying
-  \end{frame}
-
-% Revisão Sistemática da Literatura
-  \section{Revisão Sistemática da Literatura}
-  \begin{darkframes}
-    \begin{frame}{Revisão Sistemática da Literatura}
-      \justifying
-    \end{frame}
-  \end{darkframes}
-
-% Desenvolvimento
-  \section{Desenvolvimento}
-    \begin{frame}{Desenvolvimento}
-      \justifying
-    \end{frame}
-
+	% -------------------------- Sumário
+	\frame[c]{\maketitle}
+	\begin{frame}{Sumário}
+		\tableofcontents
+	\end{frame}
+	% -------------------------- Introdução
+	\section{Introdução}
+		% -------------------------- Cenário Global
+		\begin{frame}{Cenário Global}
+			\begin{itemize}
+				\justifying
+				\item A cibersegurança consolidou-se como um pilar estratégico para a soberania nacional e estabilidade econômica global;
+				\item Força de trabalho precisa crescer para atender à crescente demanda por proteção de dados;
+				\item Aumento de apenas 0,1\% em relação a 2023;
+				\item Força de trabalho desacelerando, considerando o aumento de 8,7\% entre 2022 e 2023;
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Sub-representação feminina
+		\begin{frame}{Sub-representação feminina}
+			\begin{itemize}
+				\justifying
+				\item  A participação feminina na força de trabalho global está entre 20\% e 25\%;	
+				\item 26\% dos profissionais com menos de 30 anos;
+				\item 13\% da força de trabalho acima de 60 anos;
+				\item Em média, mais escolarizadas: 52\% possuem pós-graduação, comparado a 44\% de seus pares masculinos;
+				\item Exercem 17\% dos cargos de liderança executiva;
+				\item Recebem cerca de 12\% a menos que homens nas posições de direções de liderança;
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Cenário brasileiro
+		\begin{frame}{Cenário brasileiro}
+			\begin{itemize}
+				\justifying
+				\item  Decreto n.º 12.573/2025 (BRASIL, 2025), que institui a nova Estratégia Nacional de Cibersegurança (E-Ciber);
+				\item Programa Hackers do Bem;
+				\item Qualificar mais de 30 mil profissionais por meio de um ecossistema de ensino gratuito, escalável e fundamentado em gamificação e atividades práticas simuladas;
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Problema de Pesquisa
+		\begin{frame}{Problema de Pesquisa}
+			\begin{itemize}
+				\justifying
+				\item A literatura aponta para um fenômeno persistente de “vazamento de talentos” (\textit{leaky pipeline}), onde as taxas de evasão femininas superam as masculinas à medida que o nível técnico e a competitividade aumentam;
+				\item A retenção é influenciada por barreiras estruturais, culturais e pedagógicas;
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Questão de Pesquisa
+		\begin{frame}{Questão de Pesquisa}
+			\justifying
+			Como programas de capacitação em cibersegurança com capacidade de atendimento em larga escala, como o Hackers do Bem, podem ser customizados para ampliar o ingresso e a permanência de talentos femininos?
+		\end{frame}
+		% -------------------------- Solução Proposta
+		\begin{frame}{Solução Proposta}
+			\begin{itemize}
+				\justifying
+				\item Desenvolvimento de um \textit{framework} de diretrizes voltado à inclusão e retenção de mulheres em programas de capacitação em cibersegurança;
+				\item  Mineração de dados educacionais de participantes do Programa Hackers do Bem com a análise qualitativa da percepção das alunas;
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Delimitação de Escopo
+		\begin{frame}{Delimitação de Escopo}
+			\begin{itemize}
+				\justifying
+				\item  Análise dos dados das turmas do Programa Hackers do Bem realizadas entre 2024 e 2026;
+				\item Não faz parte do escopo a alteração do código-fonte da plataforma de ensino ou a intervenção direta nas turmas em andamento, caracterizando-se como um estudo observacional e propositivo;
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Justificativa
+		\begin{frame}{Justificativa}
+			\begin{itemize}
+				\justifying
+				\item Diversidade em equipes de segurança resulta em maior eficiência operacional e melhor desempenho na resolução de problemas complexos;
+				\item Investigar os fatores que influenciam a permanência de mulheres em programas de capacitação em cibersegurança;
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Objetivos
+		\begin{frame}{Objetivo Geral}
+			\begin{block}{}
+				\justifying
+				Definir e avaliar um conjunto de diretrizes para o aumento da atração e permanência feminina em programas de capacitação em cibersegurança.
+			\end{block}
+		\end{frame}
+		% -------------------------- Objetivos Específicos
+		\begin{frame}{Objetivos Específicos}
+			\begin{block}{}
+				\justifying
+				Mapear as estratégias de retenção e barreiras de gênero documentadas na literatura, por meio de Revisão Sistemática da Literatura (RSL).
+			\end{block}
+			\begin{block}{}
+				\justifying
+				Identificar os pontos críticos de evasão feminina do Programa Hackers do Bem, por meio de uma análise quantitativa do funil de progressão do programa e de uma análise qualitativa conduzida por meio de entrevistas com as participantes do programa.
+			\end{block}
+		\end{frame}
+		% -------------------------- Objetivos Específicos
+		\begin{frame}{Objetivos Específicos}
+			\begin{block}{}
+				\justifying
+				Avaliar a correlação entre os mecanismos de gamificação (Pontos de Experiência (XP), Ranking), outras estratégias de engajamento e o desempenho das participantes do programa, por meio da análise dos dados do programa Hackers do Bem.
+			\end{block}
+			\begin{block}{}
+				\justifying
+				Elaborar o Framework de Diretrizes para Inclusão e Retenção, fundamentado nos diagnósticos quantitativos e qualitativos.
+			\end{block}
+			\begin{block}{}
+				\justifying
+				Avaliar a viabilidade técnica e a pertinência pedagógica das diretrizes propostas junto a um painel de especialistas.
+			\end{block}
+		\end{frame}
+		% -------------------------- Objetivos Específicos
+		\begin{frame}{Objetivos Específicos}
+			\begin{block}{}
+				\justifying
+				Avaliar a percepção de valor e o impacto potencial das diretrizes na intenção de permanência das alunas do Programa Hackers do Bem, por meio de questionários de avaliação com as participantes do programa.
+			\end{block}
+		\end{frame}
+		% -------------------------- Metodologia da Pesquisa e Procedimentos metodológicos
+		\begin{frame}{Metodologia da Pesquisa e Procedimentos metodológicos}
+			\justifying
+			\begin{itemize}
+				\item RSL
+				\item Análise de trabalhos relacionados
+				\item Coleta de Dados
+				\item Análise de Dados
+				\item Concepção e Modelagem do Framework
+				\item Avaliação da Proposta
+			\end{itemize}
+		\end{frame}
+	% -------------------------- Fim da Introdução
+	% -------------------------- Fundamentação Teórica
+	\section{Fundamentação Teórica}
+		% -------------------------- Barreiras de Entrada e o Fenômeno do Leaky Pipeline
+		\begin{frame}{Barreiras de Entrada e o Fenômeno do \textit{Leaky Pipeline}}
+			\justifying
+			O conceito de \textit{Leaky Pipeline} (vazamento de talentos) é amplamente utilizado na literatura para descrever a perda progressiva e desproporcional da participação feminina ao longo das etapas de formação acadêmica e transição para a carreira.
+		\end{frame}
+		% -------------------------- Barreiras de Entrada e o Fenômeno do Leaky Pipeline
+		\begin{frame}{Barreiras de Entrada e o Fenômeno do \textit{Leaky Pipeline}}
+			\begin{itemize}
+				\justifying
+				\item Iniciam-se no acesso desigual à STEM;
+				\item Escassez de modelos de referência (\textit{role models});
+				\item Estereótipos culturais;
+				\item Dissonância de identidade para jovens mulheres;
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Metodologias de Ensino e Gamificação
+		\begin{frame}{Metodologias de Ensino e Gamificação}
+			\begin{itemize}
+				\justifying
+				\item Gamificação e Aprendizagem Baseada em Jogos (GBL);
+				\item \textit{Capture The Flag};
+				\item Competições;
+				\item Listas de classificação pública (\textit{leaderboards});
+			\end{itemize}
+		\end{frame}
+		% -------------------------- O Programa Hackers do Bem
+		\begin{frame}{O Programa \textit{Hackers} do Bem}
+			\begin{itemize}
+				\justifying
+				\item Formação de recursos humanos qualificados em cibersegurança e privacidade
+				\item Atender um público massivo
+				\item Níveis progressivos
+				\begin{itemize}
+					\justifying
+					\item Nivelamento
+					\item Básico
+					\item Fundamental
+					\item Especializado
+					\item Residência Tecnológica
+				\end{itemize}
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Estrutura da Formação
+		\begin{frame}{Estrutura da Formação}
+			\begin{center}
+				\includegraphics[width=1\textwidth]{./images/desenho1.png}
+			\end{center}
+		\end{frame}
+		% -------------------------- Mecânica de Pontuação e Emblemas
+		\begin{frame}{Mecânica de Pontuação e Emblemas}
+			\begin{itemize}
+				\justifying
+				\item A unidade fundamental de progresso no AVA do Programa Hackers do Bem é o Ponto de Experiência (XP)
+				\item  Cada interação do aluno, como o consumo de videoaulas, a leitura de e-books e a realização de quizzes de fixação
+				\item O acúmulo destes pontos desbloqueia emblemas (badges) que atuam como indicadores visuais de senioridade e progressão na trilha formativa
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Mecânica de Pontuação e Emblemas
+		\begin{frame}{Mecânica de Pontuação e Emblemas}
+			\begin{center}
+				\includegraphics[width=1\textwidth]{./images/desenho3.png}
+			\end{center}
+		\end{frame}
+		% -------------------------- O Funil de Ranqueamento e Classificação
+		\begin{frame}{O Funil de Ranqueamento e Classificação}
+			\begin{center}
+				\includegraphics[width=1\textwidth]{./images/desenho2.png}
+			\end{center}
+		\end{frame}
+		% -------------------------- Ações de Engajamento e Eventos Práticos
+		\begin{frame}{Ações de Engajamento e Eventos Práticos}
+			\begin{itemize}
+				\justifying
+				\item \textit{CyberGames}
+				\item CTFs (CTF Para Elas)
+				\item Hackathons
+				\item Workshops
+				\item Hub \textit{Hackers} do Bem
+			\end{itemize}
+		\end{frame}
+	% -------------------------- Fim da Fundamentação Teórica
+	% -------------------------- Trabalhos Relacionados
+	\section{Trabalhos Relacionados}
+		% -------------------------- PICO
+		\begin{frame}{PICO}
+			\vspace{0.3cm}
+			\centering
+			\begin{footnotesize}
+				\begin{tabular}{|l|p{6.5cm}|}
+					\hline
+					\textbf{Elemento} & \textbf{Definição na Pesquisa} \\
+					\hline
+					\textbf{População} & Meninas, mulheres, estudantes e profissionais em cibersegurança. \\
+					\hline
+					\textbf{Intervenção} & Projetos, programas, ações de inclusão, capacitação, mentoria, oficinas, eventos e \textit{hackathons}. \\
+					\hline
+					\textbf{Comparação} & Projetos em cibersegurança (gerais/com recorte de gênero). \\
+					\hline
+					\textbf{Resultado (\textit{Outcome})} & Aumento do número de ações voltadas às mulheres na área de cibersegurança. \\
+					\hline
+				\end{tabular}
+			\end{footnotesize}
+			\vspace{0.2cm}
+			\raggedright
+		\end{frame}
+		% -------------------------- String de busca
+		\begin{frame}{\textit{String} de busca}
+			\begin{exampleblock}{}
+				\justifying
+				\textit{(\enquote{women} OR \enquote{girls} OR \enquote{female} OR \enquote{gender}) AND (\enquote{cybersecurity} OR \enquote{digital security} OR \enquote{information security} OR \enquote{cyber security}) AND (\enquote{inclusion} OR \enquote{outreach} OR \enquote{mentor} OR \enquote{train} OR \enquote{empower} OR \enquote{project} OR \enquote{hackathon} OR \enquote{workshop} OR \enquote{bootcamp})}
+			\end{exampleblock}
+		\end{frame}
+		% -------------------------- Repositórios
+		\begin{frame}{Repositórios}
+			\begin{itemize}
+				\justifying
+				\item Livros e artigos completos publicados em periódicos ou eventos
+				\item Período de 2020 a 2025
+				\item Bases de dados
+				\begin{itemize}
+					\justifying
+					\item IEEE Xplore
+					\item Scopus
+					\item Google Scholar
+					\item ACM
+				\end{itemize}
+			\end{itemize}
+		\end{frame}
+		%-------------------------- Etapas da Seleção
+		\begin{frame}{Etapas da Seleção}
+			\begin{itemize}
+				\justifying
+				\item Primeira fase: triagem por título
+					\begin{itemize}
+						\justifying
+						\item Inclusão:
+							\begin{itemize}
+								\justifying
+								\item O artigo completo está disponível
+								\item O artigo aborda treinamento em cibersegurança ou a inclusão de mulheres no setor
+							\end{itemize}
+						\item Exclusão:
+							\begin{itemize}
+								\justifying
+								\item Se o título não é conclusivo para inclusão, o abstract foi lido, se o abstract não atende os critérios de inclusão dessa fase, o artigo é excluído
+							\end{itemize}
+					\end{itemize}
+			\end{itemize}
+		\end{frame}
+		%-------------------------- Etapas da Seleção
+		\begin{frame}{Etapas da Seleção}
+			\begin{itemize}
+				\justifying
+				\item Segunda fase: triagem por abstract
+					\begin{itemize}
+						\justifying
+						\item Inclusão:
+							\begin{itemize}
+								\justifying
+								\item Conexão direta entre o ensino de cibersegurança e
+								estratégias de inclusão de mulheres
+								\item Análise de gênero
+							\end{itemize}
+						\item Exclusão:
+							\begin{itemize}
+								\justifying
+								\item Estudos puramente técnicos
+								\item Sem dados de recorte de gênero
+							\end{itemize}
+					\end{itemize}
+			\end{itemize}
+		\end{frame}
+		%-------------------------- Etapas da Seleção
+		\begin{frame}{Etapas da Seleção}
+			\begin{itemize}
+				\justifying
+				\item Terceira fase: leitura do texto completo
+					\begin{itemize}
+						\justifying
+						\item Inclusão:
+							\begin{itemize}
+								\justifying
+								\item O artigo relata alguma estratégia utilizada para ampliar o ingresso e a permanência de talentos femininos em programas de treinamento em cibersegurança?
+							\end{itemize}
+						\item Exclusão:
+							\begin{itemize}
+								\justifying
+								\item O artigo NÃO relata alguma estratégia utilizada para ampliar o ingresso e a permanência de talentos femininos em programas de treinamento em cibersegurança?
+							\end{itemize}
+					\end{itemize}
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Artigos selecionados
+		\begin{frame}{Artigos selecionados}
+			\vspace{0.3cm}
+			\centering
+			\begin{footnotesize}
+				\begin{tabular}{l|c|c|c|c}
+					\toprule
+					\textbf{Base de dados} & \textbf{Identificação} & \textbf{Primeira fase} & \textbf{Segunda fase} & \textbf{Seleção final} \\
+					\midrule
+					Google Scholar & 50  & 29 & 6  & 1 \\
+					Scopus         & 54  & 23 & 5  & 1 \\
+					IEEE Xplore    & 342 & 32 & 11 & 1 \\
+					ACM            & 215 & 30 & 10 & 6 \\
+					\midrule
+					\textbf{Total} & \textbf{661} & \textbf{114} & \textbf{32} & \textbf{9} \\
+					\bottomrule
+				\end{tabular}
+			\end{footnotesize}
+			\vspace{0.2cm}
+			\raggedright
+		\end{frame}
+		% -------------------------- Artigos selecionados
+		\begin{frame}{Artigos selecionados}
+			\begin{center}
+				\includegraphics[width=1\textwidth]{./images/distribuicao-temporal.png}
+			\end{center}
+		\end{frame}
+		% -------------------------- Artigos selecionados
+		\begin{frame}{Artigos selecionados}
+			\vspace{0.2cm}
+			\centering
+			{\footnotesize Avaliação multidimensional dos trabalhos selecionados (Escala 1--5)\par}
+			\vspace{0.25cm}
+			\resizebox{\textwidth}{!}{%
+			\begin{footnotesize}
+				\begin{tabular}{l|c|c|c|c|c}
+					\toprule
+					\textbf{Trabalho} & \textbf{\shortstack{Gênero\\(QP1)}} & \textbf{\shortstack{Pedagogia\\(QP2)}} & \textbf{\shortstack{Colab.\\(QP3)}} & \textbf{\shortstack{Escala-\\bilidade}} & \textbf{\shortstack{Avali-\\ação}} \\
+					\midrule
+					Costa et al. (2025) & 5 & 5 & 3 & 4 & 5 \\
+					Musuva et al. (2025) & 4 & 3 & 5 & 3 & 4 \\
+					Tshekiso et al. (2025) & 3 & 2 & 3 & 5 & 4 \\
+					Benson, Chiacchio e Fraczek (2025) & 5 & 2 & 5 & 3 & 3 \\
+					Costa et al. (2023) & 5 & 5 & 4 & 3 & 4 \\
+					Casey et al. (2023) & 4 & 5 & 4 & 2 & 4 \\
+					Thomas et al. (2024) & 4 & 5 & 2 & 2 & 3 \\
+					Rahman, Billionniere e Subhedar (2022) & 5 & 3 & 4 & 3 & 4 \\
+					Hogan et al. (2025) & 2 & 3 & 5 & 5 & 4 \\
+					\bottomrule
+				\end{tabular}
+			\end{footnotesize}%
+			}
+			\vspace{0.2cm}
+			\raggedright
+		\end{frame}
+		% -------------------------- Artigos selecionados
+		\begin{frame}{Artigos selecionados}
+			\begin{center}
+				\includegraphics[width=1\textwidth]{./images/analise-multidimensional.png}
+			\end{center}
+		\end{frame}
+	% -------------------------- Fim dos Trabalhos Relacionados
+	% -------------------------- Proposta
+	% -------------------------- Fim da Proposta
 \end{document}
