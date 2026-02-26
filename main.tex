@@ -5,6 +5,7 @@
 \usepackage{csquotes}
 \usepackage{ragged2e}
 \usepackage{booktabs}
+\usepackage{colortbl}
 \usepackage{tabularx}
 \usepackage{tikz}
 \usetikzlibrary{calc, shapes, backgrounds}
@@ -196,7 +197,7 @@
 		% -------------------------- Estrutura da Formação
 		\begin{frame}{Estrutura da Formação}
 			\begin{center}
-				\includegraphics[width=1\textwidth]{./images/desenho1.png}
+				\includegraphics[width=1\textwidth]{./images/estrutura.png}
 			\end{center}
 		\end{frame}
 		% -------------------------- Mecânica de Pontuação e Emblemas
@@ -211,13 +212,13 @@
 		% -------------------------- Mecânica de Pontuação e Emblemas
 		\begin{frame}{Mecânica de Pontuação e Emblemas}
 			\begin{center}
-				\includegraphics[width=1\textwidth]{./images/desenho3.png}
+				\includegraphics[width=1\textwidth]{./images/emblemas.png}
 			\end{center}
 		\end{frame}
 		% -------------------------- O Funil de Ranqueamento e Classificação
 		\begin{frame}{O Funil de Ranqueamento e Classificação}
 			\begin{center}
-				\includegraphics[width=1\textwidth]{./images/desenho2.png}
+				\includegraphics[width=1\textwidth]{./images/pontuacoes.png}
 			\end{center}
 		\end{frame}
 		% -------------------------- Ações de Engajamento e Eventos Práticos
@@ -364,17 +365,26 @@
 			\vspace{0.2cm}
 			\raggedright
 		\end{frame}
-		% -------------------------- Artigos selecionados
-		\begin{frame}{Artigos selecionados}
+		% -------------------------- Distribuição temporal dos trabalhos selecionados
+		\begin{frame}{Distribuição temporal dos trabalhos selecionados}
 			\begin{center}
 				\includegraphics[width=1\textwidth]{./images/distribuicao-temporal.png}
 			\end{center}
 		\end{frame}
-		% -------------------------- Artigos selecionados
-		\begin{frame}{Artigos selecionados}
+		% -------------------------- Análise Multidimensional dos Trabalhos
+		\begin{frame}{Análise Multidimensional dos Trabalhos}
+			\begin{itemize}
+				\item Foco em Gênero e Barreiras (QP1)
+				\item Abordagens Pedagógicas (QP2)
+				\item Colaboração e Autoeficácia (QP3)
+				\item Escalabilidade e Alcance
+				\item Avaliação
+			\end{itemize}
+		\end{frame}
+		% --------------------------Análise Multidimensional dos Trabalhos
+		\begin{frame}{Análise Multidimensional dos Trabalhos}
 			\vspace{0.2cm}
 			\centering
-			{\footnotesize Avaliação multidimensional dos trabalhos selecionados (Escala 1--5)\par}
 			\vspace{0.25cm}
 			\resizebox{\textwidth}{!}{%
 			\begin{footnotesize}
@@ -398,13 +408,99 @@
 			\vspace{0.2cm}
 			\raggedright
 		\end{frame}
-		% -------------------------- Artigos selecionados
-		\begin{frame}{Artigos selecionados}
+		
+		% -------------------------- Análise Multidimensional dos Trabalhos
+		\begin{frame}{Análise Multidimensional dos Trabalhos}
 			\begin{center}
-				\includegraphics[width=1\textwidth]{./images/analise-multidimensional.png}
+				\includegraphics[width=\textwidth, height=0.7\textheight, keepaspectratio]{./images/analise-multidimensional.png}
 			\end{center}
+		\end{frame}
+		% -------------------------- Comparação e Lacunas Identificadas
+		\begin{frame}{Comparação e Lacunas Identificadas}
+			\begin{itemize}
+				\justifying
+				\item Embora existam iniciativas robustas em isolamento, há uma carência de modelos que integrem simultaneamente pedagogias de inclusão profunda (como narrativas e \textit{scaffolding}) com estratégias de larga escala (como plataformas \textit{EAD} massivas).
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Comparação e Lacunas Identificadas
+		\begin{frame}{Comparação e Lacunas Identificadas}
+			\centering
+			\resizebox{\textwidth}{!}{%
+			\begin{footnotesize}
+				\begin{tabular}{l|c|c|c|c|>{\raggedright\arraybackslash}p{3.4cm}}
+					\toprule
+					\rowcolor[HTML]{EFEFEF}
+					\textbf{Trabalho} & \textbf{Foco Gênero} & \textbf{Escalab.} & \textbf{Pedag. Incl.} & \textbf{Colab./Ment.} & \textbf{Limitação principal (gap)} \\
+					\midrule
+					Costa et al. (2025) & Alta & Média & Alta & Média & Intervenção pontual, falta dados de carreira a longo prazo. \\
+					Musuva et al. (2025) & Média & Média & Média & Alta & Modelo presencial intensivo, difícil de escalar massivamente. \\
+					Tshekiso et al. (2025) & Baixa & Alta & Baixa & Média & Foco em infraestrutura/CTF padrão, sem pedagogia de gênero. \\
+					Benson, Chiacchio e Fraczek (2025) & Alta & Baixa & Baixa & Alta & Estudo teórico/qualitativo, sem plataforma de ensino aplicada. \\
+					Costa et al. (2023) & Alta & Média & Alta & Alta & Foco em atração (Ensino Médio), não em formação profissional. \\
+					Casey et al. (2023) & Alta & Baixa & Alta & Alta & Depende de mediação humana intensa (workshops presenciais). \\
+					Thomas et al. (2024) & Alta & Baixa & Alta & Baixa & Estudo de caso pequeno (N=24), foco em suporte individual. \\
+					Rahman, Billionniere e Subhedar (2022) & Alta & Baixa & Média & Alta & Foco específico em retorno ao trabalho, escala de workshop. \\
+					Hogan et al. (2025) & Baixa & Alta & Média & Alta & Analisa times mistos \enquote{de sucesso}, viés de sobrevivência. \\
+					\midrule
+					\rowcolor[HTML]{C0C0C0}
+					\textbf{Esta Dissertação} & \textbf{Alta} & \textbf{Alta} & \textbf{Alta} & \textbf{Média} & \textbf{Avaliação em ambiente real massivo (\textit{Hackers do Bem}).} \\
+					\bottomrule
+				\end{tabular}%
+			\end{footnotesize}%
+			}
+			\vspace{0.2cm}
+			\raggedright
+			{\tiny Fonte: Elaborado pela autora}
 		\end{frame}
 	% -------------------------- Fim dos Trabalhos Relacionados
 	% -------------------------- Proposta
+	\section{Proposta}
+		% -------------------------- Framework de Diretrizes para Retenção
+		\begin{frame}{Framework de Diretrizes para Retenção}
+			\begin{itemize}
+				\justifying
+				\item \textbf{Eixo 1: Contextualização Narrativa:} Propõe diretrizes para a camada de apresentação do conteúdo, orientando a transição de exercícios técnicos abstratos para narrativas investigativas com propósito social, visando reduzir a barreira cultural de entrada.
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Framework de Diretrizes para Retenção
+		\begin{frame}{Framework de Diretrizes para Retenção}
+			\begin{itemize}
+				\justifying
+				\item \textbf{Eixo 2: Mecânicas de Avaliação Inclusiva:} Visa reformular a interpretação das métricas de gamificação (\textit{XP} e Ranking). A proposta estabelece diretrizes para valorizar a \enquote{Eficiência de Engajamento} (progresso individual) em detrimento da pura comparação competitiva pública.
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Framework de Diretrizes para Retenção
+		\begin{frame}{Framework de Diretrizes para Retenção}
+			\begin{itemize}
+				\justifying
+				\item \textbf{Eixo 3: Suporte Social Escalável:} Estabelece regras para a criação de redes de suporte em ambientes virtuais, operacionalizando a mentoria e o suporte de pares de forma escalável dentro da plataforma.
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Frente 1: Mineração de Dados (O “Onde” e o “Quando”)
+		\begin{frame}{Frente 1: Mineração de Dados (O “Onde” e o “Quando”)}
+			\begin{itemize}
+				\justifying
+				\item Análise Volumétrica
+				\item Correlação de Desempenho
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Frente 2: Levantamento de Percepção (O “Porquê”)
+		\begin{frame}{Frente 2: Levantamento de Percepção (O “Porquê”)}
+			\begin{itemize}
+				\justifying
+				\item Autoeficácia em Cibersegurança
+				\item Percepção de Competitividade
+				\item Pertencimento
+			\end{itemize}
+		\end{frame}
+		% -------------------------- Frente 2: Levantamento de Percepção (O “Porquê”)
+		\begin{frame}{Frente 2: Levantamento de Percepção (O “Porquê”)}
+			\begin{itemize}
+				\justifying
+				\item Autoeficácia em Cibersegurança
+				\item Percepção de Competitividade
+				\item Pertencimento
+			\end{itemize}
+		\end{frame}
 	% -------------------------- Fim da Proposta
 \end{document}
