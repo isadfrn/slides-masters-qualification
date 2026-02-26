@@ -1,4 +1,0 @@
-\babel@toc {brazilian}{}\relax 
-\beamer@sectionintoc {1}{O Déficit na Cibersegurança}{3}{0}{1}
-\beamer@sectionintoc {2}{Leaky Pipeline e Gap de Gênero}{4}{0}{2}
-\beamer@sectionintoc {3}{Estudo de Caso: Hackers do Bem}{5}{0}{3}

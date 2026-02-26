@@ -1,0 +1,19 @@
+% Frame "capa" para iniciar cada section (mesmo fundo do darkframes).
+% - fundo: igual ao `darkframes`
+% - texto: branco (via cores do `darkframes`)
+% - conteúdo: apenas 1 título, centralizado no eixo X
+\newcommand{\sectioncover}[1]{%
+  \begin{darkframes}%
+    \begin{frame}[plain,c]
+      \centering
+      \vfill
+      {\usebeamercolor[fg]{normal text}\usebeamerfont{title}\Huge\bfseries #1\par}
+      \vfill
+    \end{frame}%
+  \end{darkframes}%
+}
+
+% Ativa automaticamente a capa no começo de cada seção:
+\AtBeginSection{%
+  \sectioncover{\insertsectionhead}%
+}
