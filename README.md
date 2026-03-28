@@ -1,0 +1,17 @@
+# Masters Qualification Slides
+
+## About
+
+This repository contains the LaTeX source code and related files for my Master's qualification slides.
+
+## Run
+
+To compile this document, use [Overleaf](https://www.overleaf.com/). Simply upload the project files to Overleaf and compile `00_main.tex`.
+
+## Status
+
+Finished
+
+## License
+
+[CC BY-NC-ND 4.0](./LICENSE)
